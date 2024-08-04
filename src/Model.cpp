@@ -8,13 +8,13 @@ const zSTRING sep = " \t";
 const zSTRING trenn = " \t\r";
 const zSTRING skip = " \t\r";
 
-void CutMarks(zSTRING arg)
+static void CutMarks(zSTRING& arg)
 {
 	arg.Delete("\"", zSTR_TO);
 	arg.Delete("\"", zSTR_FROM);
 }
 
-zSTRING CutMarks2(zSTRING arg)
+static zSTRING CutMarks2(const zSTRING& arg)
 {
 	zSTRING n = arg;
 	n.Delete("\"", zSTR_TO);
